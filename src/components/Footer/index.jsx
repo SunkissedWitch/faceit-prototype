@@ -1,39 +1,39 @@
 export const Footer = () => {
   return (
-    <footer className='footer px-12 py-10 gap-x-12'>
-      <div className='border-t border-neutral-600 pt-12 w-full'>
-        <div className='footer-title'>
+    <footer id='footer' className='footer px-[7.5rem] pb-24 pt-16 gap-x-12'>
+      <div id="address" className='border-t border-neutral-600 pt-12 w-[13rem]'>
+        <div className='footer-title text-white opacity-100 mb-6'>
           Office
         </div>
-        <div className='flex flex-col'>
-          <p>ZAPORIZHZHIA</p>
-          <p>Volgogradskaya, 26A</p>
+        <div className='font-light flex flex-col gap-y-2.5 capitalize'>
+          <p className="text-[#888] hover:text-white transition-colors">Zaporizhzhia</p>
+          <p className="text-[#888] hover:text-white transition-colors">Volgogradskaya, 26A</p>
         </div>
       </div>
-      <div className='border-t border-neutral-600 pt-12 w-full'>
-        <div className='footer-title'>
+      <div id="mail-us" className='border-t border-neutral-600 pt-12 w-[13rem]'>
+        <div className='footer-title text-white opacity-100 mb-6'>
         MAIL US
         </div>
-        <div className='flex flex-col'>
-          <p>info@faceit.com.ua</p>
+        <div className='font-light flex flex-col gap-y-2.5 capitalize'>
+          <p className="text-[#888] hover:text-white transition-colors">info@faceit.com.ua</p>
         </div>
       </div>
-      <div className='border-t border-neutral-600 pt-12 w-full'>
-        <div className='footer-title'>
+      <div id="social-media" className='border-t border-neutral-600 pt-12 w-[13rem]'>
+        <div className='footer-title text-white opacity-100 mb-6'>
         FOLLOW US
         </div>
-        <div className='flex flex-col'>
-          <p>Instagram</p>
-          <p>Linked In</p>
+        <div className='font-light flex flex-col gap-y-2.5 capitalize'>
+          <a className="text-[#888] hover:text-white transition-colors" href="#social-media">Instagram</a>
+          <a className="text-[#888] hover:text-white transition-colors" href="#social-media">Linked In</a>
         </div>
       </div>
-      <div className='border-t border-neutral-600 pt-12 w-full'>
-        <div className='footer-title'>
+      <div id="legal" className='border-t border-neutral-600 pt-12 w-[13rem]'>
+        <div className='footer-title text-white opacity-100 mb-6'>
         lEGAL
         </div>
-        <div className='flex flex-col'>
-          <p>Privacy</p>
-          <p>Terms</p>
+        <div className='font-light flex flex-col gap-y-2.5 capitalize'>
+          <a className="text-[#888] hover:text-white transition-colors" href="#legal">Privacy</a>
+          <a className="text-[#888] hover:text-white transition-colors" href="#legal">Terms</a>
         </div>
       </div>
     </footer>

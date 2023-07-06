@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="dark">
       <body className={montserrat.className}>
         <Navbar />
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 border border-yellow-200">
+        <main className="flex min-h-screen flex-col items-center justify-between px-[7.5rem]">
           {children}
         </main>
         <Footer />
