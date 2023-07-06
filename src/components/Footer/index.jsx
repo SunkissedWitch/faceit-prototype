@@ -18,7 +18,7 @@ export const Footer = () => {
           <p className="text-[#888] hover:text-white transition-colors">info@faceit.com.ua</p>
         </div>
       </div>
-      <div id="social-media" className='border-t border-neutral-600 pt-12 w-[13rem]'>
+      <div id="follow-us" className='border-t border-neutral-600 pt-12 w-[13rem]'>
         <div className='footer-title text-white opacity-100 mb-6'>
         FOLLOW US
         </div>
