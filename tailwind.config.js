@@ -24,7 +24,27 @@ module.exports = {
       {
         dark: {
           ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+            "primary": "#03A473",
+            "primary-content": "#fff",
+            "secondary": "#888",
+            "secondary-focus": "#eee",
+            "accent": "#038f00",
+            "accent-content": "#fff",
+            "neutral": "#232323",
+            "base-100": "#101010",
+            "base-content": "#888"
+        },
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
           "primary": "#03A473",
+          "primary-content": "#363636",
+          "secondary": "#888",
+          "secondary-focus": "#363636",
+          "accent": "#038f00",
+          "accent-content": "#000",
+          "neutral": "#E0E0E0",
+          "base-100": "#fff",
+          "base-content": "#363636"
         },
       },
     ],
