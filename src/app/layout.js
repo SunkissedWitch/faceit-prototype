@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="">
       <body className={montserrat.className}>
         <Navbar />
         <main className="flex min-h-screen flex-col items-center justify-between px-[7.5rem]">
