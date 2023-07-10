@@ -9,7 +9,7 @@ export const HeroComposition = () => {
   return (
     <div className="hero mt-24 min-h-[26.5rem] bg-contain bg-no-repeat" style={{backgroundImage: `url(${bg?.src})`}}>
       {/* <div className="hero-overlay bg-opacity-60"></div> */}
-      <div className="hero-content text-center py-6">
+      <div className="hero-content z-auto text-center py-6">
         <div className="max-w-3xl flex flex-col gap-y-5">
           <p className="mb-5 text-2xl text-primary-content">Planning. <span className='text-primary'>Programming.</span> Result.</p>
           <h1 className="mb-5 text-6xl text-primary-content capitalize font-semibold">End-to-end software <span className='bg-gradient-to-r from-primary to-[#038F00] bg-clip-text text-transparent'>development</span> company</h1>
