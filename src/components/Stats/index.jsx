@@ -22,8 +22,8 @@ export const Stats = () => {
     <div className="stats w-full">
       {staticStat.map((stat, index) => (
         <div key={`${stat.value}-${index}`} className="stat">
-          <div className="stat-value text-[4rem] leading-none text-primary font-semibold text-center">{stat.value}</div>
-          <div className="stat-desc text-[1.32rem] leading-tight text-primary-content capitalize text-center">{stat.desc.toLowerCase()}</div>
+          <div className="stat-value text-[4rem] leading-none text-primary font-semibold text-center mb-4">{stat.value}</div>
+          <div className="stat-desc text-[1.32rem] leading-none text-primary-content capitalize text-center">{stat.desc.toLowerCase()}</div>
         </div>
       ))}
     </div>
