@@ -9,12 +9,12 @@ export const HeroComposition = () => {
   return (
     <div className="hero mt-24 min-h-[26.5rem] bg-contain bg-no-repeat" style={{ backgroundImage: `url(${bg?.src})` }}>
       {/* <div className="hero-overlay bg-opacity-60"></div> */}
-      <div className="hero-content z-auto text-center py-6">
+      <div className="hero-content text-center py-6">
         <div className="max-w-3xl flex flex-col gap-y-5">
           <div className="mb-5 text-2xl text-primary-content antialiased">
             Planning. <span className='text-primary'>Programming.</span> Result.
           </div>
-          <div className="mb-5 -z-10 text-6xl text-primary-content font-semibold antialiased flex flex-row flex-wrap mx-auto justify-center gap-x-4">
+          <div className="mb-5 text-6xl text-primary-content font-semibold antialiased flex flex-row flex-wrap mx-auto justify-center gap-x-4">
             <span className='heading-line heading-line-first'>
               <span className='heading-line-gradient'>End-to-end Software</span>
             </span>
