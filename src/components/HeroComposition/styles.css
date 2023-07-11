@@ -107,13 +107,14 @@
 }
 
 .heading-line-gradient {
+  text-transform: capitalize;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .heading-line-first > .heading-line-gradient {
-  background-image: linear-gradient(to right, hsl(var(--p)), hsl(var(--a)));
+  background-image: linear-gradient(to right, hsl(var(--p)), hsl(var(--a)), hsl(var(--p)));
   animation: first_heading_gradient 8s infinite;
 }
 
@@ -123,28 +124,30 @@
 }
 
 .heading-line-third > .heading-line-gradient {
-  background-image: linear-gradient(to right, hsl(var(--p)), hsl(var(--a)));
+  background-image: linear-gradient(to left, hsl(var(--p)), hsl(var(--a)));
   animation: third_heading_gradient 8s infinite;
 }
 .heading-line::before {
   display: block;
   position: absolute;
-  /* color: #fff; */
   pointer-events: none;
   width: 100%;
 }
 
 .heading-line-first::before {
-  content: "Planning.";
+  content: "End-to-end software";
+  text-transform: capitalize;
   animation: first_heading_white_text 8s infinite;
 }
 
 .heading-line-second::before {
-  content: "Programming.";
+  content: "development";
+  text-transform: capitalize;
   animation: second_heading_white_text 8s infinite;
 }
 
 .heading-line-third::before {
-  content: "Result.";
+  content: "company";
+  text-transform: capitalize;
   animation: third_heading_white_text 8s infinite;
 }
