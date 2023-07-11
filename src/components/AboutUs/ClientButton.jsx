@@ -1,6 +1,6 @@
 "use client"
 
-import { PrimaryButton } from "../PrimaryButton"
+import { PrimaryButton } from "@/components/PrimaryButton"
 
 export const ClientButton = () => {
   const handleClick = (e) => console.log('Get started today', e.target)

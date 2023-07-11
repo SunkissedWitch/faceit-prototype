@@ -1,6 +1,6 @@
-import { DescriptionText } from "../DescriptionText"
-import { HeaderText } from "../HeaderText"
-import { Stats } from "../Stats"
+import { DescriptionText } from "@/components/DescriptionText"
+import { HeaderText } from "@/components/HeaderText"
+import { Stats } from "@/components/Stats"
 import { ClientButton } from "./ClientButton"
 
 export const AboutUs = () => {
