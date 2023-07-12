@@ -32,6 +32,7 @@ module.exports = {
           "accent-content": "#000",
           "neutral": "#E0E0E0",
           "base-100": "#fff",
+          "base-300": "#5B5B5B",
           "base-content": "#363636"
         },
         dark: {
@@ -44,6 +45,7 @@ module.exports = {
             "accent-content": "#fff",
             "neutral": "#232323",
             "base-100": "#101010",
+            "base-300": "#5B5B5B",
             "base-content": "#888"
         },
       },
