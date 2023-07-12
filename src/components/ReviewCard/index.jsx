@@ -1,4 +1,4 @@
-import { CardHeaderText } from "./index.styles"
+import { CardAvatar, CardHeaderText, CardText } from "./index.styles"
 
 export const ReviewCard = ({ review, ...props }) => {
   const { firstName, lastName, role, text, avatar } = review || {
@@ -10,29 +10,16 @@ export const ReviewCard = ({ review, ...props }) => {
   }
   return (
     <>
-      <div className='w-full min-h-16 py-2 px-0'>
+      <div {...props} className='w-full flex flex-col min-h-16 py-2 px-0 gap-y-8'>
         <div className='flex flex-row w-5/6 gap-x-4'>
-          { avatar
-            ?
-            <div className="avatar">
-              <div className="w-14 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>
-            :
-            <div className="avatar placeholder">
-              <div className="bg-neutral-focus text-neutral-content rounded-full w-14">
-                <span className="text-3xl">K</span>
-              </div>
-            </div>
-          }
+          <CardAvatar avatar={avatar} firstName={firstName} />
           <CardHeaderText
             firstName={firstName}
             lastName={lastName}
             role={role}
           />
         </div>
-        <div>{text}</div>
+        <CardText name={firstName}>{text}</CardText>
       </div>
     </>
   )
