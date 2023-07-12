@@ -14,7 +14,7 @@ export const OurTeam = () => {
         <HeaderText>{text.title}</HeaderText>
         <DescriptionText className='w-[80%]'>{text.desc}</DescriptionText>
         <ClientButton />
-        <div className='border border-secondary border-opacity-30 h-80 p-24 -mx-28 text-secondary text-opacity-60 text-center'>
+        <div className='border border-secondary border-opacity-30 h-80 p-24 -mx-8 md:-mx-28 text-secondary text-opacity-60 text-center'>
           team slider
         </div>
       </div>
