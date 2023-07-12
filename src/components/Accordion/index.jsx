@@ -18,14 +18,14 @@ export const Accordion = () => {
         return (
           <div key={`${step.id}-${step.title}`} className="collapse join-item border-y border-base-300">
             <input type="radio" name="my-accordion-4" checked={isChecked} onChange={() => switchChecked(step.id)} />
-            <div className="collapse-title flex flex-row items-center px-1">
+            <div className="collapse-title flex flex-row items-center px-1 py-8">
               <div className={`${isChecked ? 'text-secondary pl-3' : 'text-secondary-focus'} text-xl w-1/4 transition-all`}>{step.id < 10 && '0'}{step.id}</div>
               <AccordionHeaderText active={isChecked}>
                 {step.title.toLowerCase()}
               </AccordionHeaderText>
             </div>
             <div className="collapse-content">
-              <div className='w-3/4 ml-auto flex flex-col gap-y-7 px-6'>
+              <div className='w-3/4 ml-auto flex flex-col gap-y-7 px-6 pb-14'>
                 <div className='flex flex-col gap-y-2'>
                   {step.mainText?.map((row, index) => (
                     <AccordionDescriptionText key={`service-main-text-${index}`}>{row}</AccordionDescriptionText>
