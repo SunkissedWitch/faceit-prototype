@@ -5,7 +5,7 @@ export const CardHeaderText = ({
 }) => {
   return (
     <div className='flex flex-col w-full gap-y-1'>
-      <div className='text-primary-content text-xl font-light'>
+      <div className='text-primary-content text-xl font-light capitalize'>
         {firstName} {lastName}
       </div>
       <div className='text-secondary text-lg font-light'>
