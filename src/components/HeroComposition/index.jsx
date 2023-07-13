@@ -14,7 +14,7 @@ export const HeroComposition = () => {
           <div className="mb-5 text-2xl text-primary-content antialiased">
             Planning. <span className='text-primary'>Programming.</span> Result.
           </div>
-          <div className="mb-5 text-6xl text-primary-content font-semibold antialiased flex flex-row flex-wrap mx-auto justify-center gap-x-4">
+          <div className="mb-5 text-4xl md:text-5xl lg:text-6xl text-primary-content font-semibold antialiased flex flex-row flex-wrap mx-auto justify-center gap-x-4">
             <span className='heading-line heading-line-first'>
               <span className='heading-line-gradient'>End-to-end Software</span>
             </span>

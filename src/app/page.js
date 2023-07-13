@@ -3,6 +3,7 @@ import { AboutUs } from '@/components/AboutUs'
 import { OurTeam } from '@/components/OurTeam'
 import { Services } from '@/components/Services'
 import { Testimonials } from '@/components/Testimonials'
+import { Partners } from '@/components/Partners'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <OurTeam />
       <Services />
       <Testimonials />
+      <Partners />
     </div>
   )
 }
