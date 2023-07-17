@@ -17,9 +17,9 @@
 }
 @media (hover: hover) {
   .btn:is(input[type="radio"]:checked):hover {
-    --tw-border-opacity: 1;
-    border-color: hsl(var(--bc) / var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+    --tw-border-opacity: 0.9;
+    border-color: hsl(var(--pc) / var(--tw-border-opacity));
+    --tw-bg-opacity: 0.9;
+    background-color: hsl(var(--pc) / var(--tw-bg-opacity));
   }
 }

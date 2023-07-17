@@ -1,6 +1,6 @@
 import './styles.css'
 
-export const FormOptions = ({ name, label, options }) => {
+export const FormOptions = ({ register, name, label, options, ...props }) => {
   return (
     <div className="form-control w-full">
       <fieldset>
@@ -12,6 +12,8 @@ export const FormOptions = ({ name, label, options }) => {
             <input
               key={`radio-${option.id}-${name}`}
               name={name}
+              {...props}
+              {...register(name)}
               type="radio"
               aria-label={option.value}
               className="btn capitalize font-normal text-lg h-10 px-[1.81rem] rounded-[0.625rem]"

@@ -28,7 +28,7 @@ export const seekingOptions = [
 export const budgetOptions = [
   { 
     id: 1,
-    value: '-$1K'
+    value: '~$1K'
   },
   { 
     id: 2,
