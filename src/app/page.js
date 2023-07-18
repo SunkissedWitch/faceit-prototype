@@ -11,7 +11,7 @@ export default function Home() {
     <div className='container flex flex-col gap-y-32 w-full'>
       <HeroComposition />
       <AboutUs />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Services />
       <Testimonials />
       <Partners />
