@@ -13,7 +13,7 @@ export const Accordion = () => {
     const handleHover = async (event) => {
       if (firstHover.current === 0) {
         firstHover.current = 1
-        return setCheked(event.target.value)
+        return setCheked('1')
       }
     };
 
