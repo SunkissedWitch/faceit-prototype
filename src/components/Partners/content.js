@@ -1,8 +1,8 @@
-import partner_1 from 'public/partners/partner01.png'
-import partner_2 from 'public/partners/partner02.png'
-import partner_3 from 'public/partners/partner03.png'
-import partner_4 from 'public/partners/partner04.png'
-import partner_5 from 'public/partners/partner05.png'
+import partner_1 from 'public/partners/png/aigo.png'
+import partner_2 from 'public/partners/png/aktura.png'
+import partner_3 from 'public/partners/png/anordica.png'
+import partner_4 from 'public/partners/png/sfs.png'
+import partner_5 from 'public/partners/png/beachfront.png'
 
 const partnersList = [
   {
