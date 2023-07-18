@@ -8,7 +8,7 @@ export const HeroComposition = () => {
   // background-blend-mode: difference;
   return (
     <div className="hero mt-24 min-h-[26.5rem] bg-contain bg-no-repeat" style={{ backgroundImage: `url(${bg?.src})` }}>
-      {/* <div className="hero-overlay bg-opacity-60"></div> */}
+      <div className="hero-overlay dark:bg-transparent dark:mix-blend-normal bg-opacity-80 bg-base-100 mix-blend-lighten" />
       <div className="hero-content text-center py-6">
         <div className="max-w-3xl flex flex-col gap-y-5">
           <div className="mb-5 text-2xl text-primary-content antialiased">
