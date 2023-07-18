@@ -10,17 +10,14 @@ export const Accordion = () => {
   const ref = useRef()
 
   useEffect(() => {
-    console.log('effect')
     const handleHover = async (event) => {
-      console.log('firstHover', firstHover)
       if (firstHover.current === 0) {
         firstHover.current = 1
-        return setCheked('1')
+        return setCheked(event.target.value)
       }
     };
 
     const element = ref.current;
-    console.log('element', element)
 
     element.addEventListener('mouseenter', handleHover);
 
