@@ -13,7 +13,7 @@ export const Partners = () => {
             // pauseOnHover
           >
             {partnersList.map((partner) => (
-              <PartnerItem key={`${partner.title}-${partner.id}`} partnerLogo={partner.source} />
+              <PartnerItem key={`${partner.title}-${partner.id}`} partnerLogo={partner.source} title={partner.title} />
             ))}
           </Marquee>
         </div>

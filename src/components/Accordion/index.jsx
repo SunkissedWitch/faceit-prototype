@@ -1,12 +1,31 @@
 "use client"
 
-import { useState } from "react"
-import { AccordionHeaderText } from "@/components/AccordionHeaderText"
-import { AccordionDescriptionText } from "@/components/AccordionDescriptionText"
+import { useState, useRef, useEffect } from "react"
 import { steps } from "./content"
+import { AccordionItem } from "@/components/AccordionItem"
 
 export const Accordion = () => {
   const [checked, setCheked] = useState(0)
+  const firstHover = useRef(0)
+  const ref = useRef()
+
+  useEffect(() => {
+    const handleHover = async (event) => {
+      if (firstHover.current === 0) {
+        firstHover.current = 1
+        return setCheked(event.target.value)
+      }
+    };
+
+    const element = ref.current;
+
+    element.addEventListener('mouseenter', handleHover);
+
+    return () => {
+      element.removeEventListener('mouseenter', handleHover);
+    }
+  }, []);
+
   const switchChecked = (e) => {
     const { value } = e?.target
     if (value === checked) {
@@ -17,34 +36,26 @@ export const Accordion = () => {
 
   return (
     <div className="join join-vertical w-full rounded-none">
-      {steps.map((step) => {
+      <AccordionItem
+        step={steps[0]}
+        id={steps[0].id}
+        isChecked={steps[0].id.toString() === checked}
+        switchChecked={switchChecked}
+        ref={ref}
+      />
+
+      {steps.slice(1).map((step) => {
         const id = step.id.toString()
         const isChecked = id === checked
 
         return (
-          <div key={`${id}-${step.title}`} className="collapse join-item border-y border-base-300">
-            <input type="checkbox" name="my-accordion-4" checked={isChecked} onChange={switchChecked} value={id} />
-            <div className="collapse-title duration-300 flex flex-row items-center px-1 py-8">
-              <div className={`${isChecked ? 'text-secondary pl-3' : 'text-secondary-focus'} text-xl w-1/4 transition-all  duration-300`}>{step.id < 10 && '0'}{id}</div>
-              <AccordionHeaderText active={isChecked}>
-                {step.title.toLowerCase()}
-              </AccordionHeaderText>
-            </div>
-            <div className="collapse-content duration-300">
-              <div className='w-3/4 ml-auto flex flex-col gap-y-7 px-6 pb-14'>
-                <div className='flex flex-col gap-y-2'>
-                  {step.mainText?.map((row, index) => (
-                    <AccordionDescriptionText key={`service-main-text-${index}`}>{row}</AccordionDescriptionText>
-                  ))}
-                </div>
-                <div className='flex flex-col gap-y-2'>
-                  {step.secondaryText?.map((row, index) => (
-                    <AccordionDescriptionText key={`service-secondary-text-${index}`} className='text-secondary'>{row}</AccordionDescriptionText>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <AccordionItem
+            key={`${id}-${step.title}`}
+            step={step}
+            id={id}
+            isChecked={isChecked}
+            switchChecked={switchChecked}
+          />
         )
       })}
     </div>
