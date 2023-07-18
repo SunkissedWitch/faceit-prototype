@@ -31,3 +31,5 @@ export const AccordionItem = forwardRef(({ step, isChecked, switchChecked, id },
     </div>
   )
 })
+
+AccordionItem.displayName = 'servicesAccordeon'
