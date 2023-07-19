@@ -1,30 +1,23 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import { useInViewport } from 'react-in-viewport';
 import { steps } from "./content"
 import { AccordionItem } from "@/components/AccordionItem"
 
 export const Accordion = () => {
   const [checked, setCheked] = useState(0)
-  const firstHover = useRef(0)
-  const ref = useRef()
+  const myRef = useRef()
+  const {
+    inViewport,
+    enterCount,
+  } = useInViewport(myRef, { threshold: 0.5 })
 
   useEffect(() => {
-    const handleHover = async (event) => {
-      if (firstHover.current === 0) {
-        firstHover.current = 1
-        return setCheked(event.target.value)
-      }
-    };
-
-    const element = ref.current;
-
-    element.addEventListener('mouseenter', handleHover);
-
-    return () => {
-      element.removeEventListener('mouseenter', handleHover);
+    if (inViewport && enterCount === 1) {
+      return setCheked('1')
     }
-  }, []);
+  }, [inViewport, enterCount])
 
   const switchChecked = (e) => {
     const { value } = e?.target
@@ -35,13 +28,12 @@ export const Accordion = () => {
   }
 
   return (
-    <div className="join join-vertical w-full rounded-none">
+    <div className="join join-vertical w-full rounded-none" ref={myRef}>
       <AccordionItem
         step={steps[0]}
         id={steps[0].id}
         isChecked={steps[0].id.toString() === checked}
         switchChecked={switchChecked}
-        ref={ref}
       />
 
       {steps.slice(1).map((step) => {
