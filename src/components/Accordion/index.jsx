@@ -19,8 +19,7 @@ export const Accordion = () => {
     }
   }, [inViewport, enterCount])
 
-  const switchChecked = (e) => {
-    const { value } = e?.target
+  const switchChecked = (value) => {
     if (value === checked) {
       return setCheked(0)
     }
@@ -31,7 +30,7 @@ export const Accordion = () => {
     <div className="join join-vertical w-full rounded-none" ref={myRef}>
       <AccordionItem
         step={steps[0]}
-        id={steps[0].id}
+        id={steps[0].id.toString()}
         isChecked={steps[0].id.toString() === checked}
         switchChecked={switchChecked}
       />

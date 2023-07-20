@@ -1,0 +1,32 @@
+.accordion-container {
+  max-height: 7rem;
+  overflow: hidden;
+  transition: max-height 600ms ease-in;
+}
+.accordion-container.item-checked {
+  max-height: 40rem;
+}
+.accordion-title {
+  cursor: pointer;
+}
+.accordion-item-content {
+  cursor: default;
+  visibility: collapse;
+  background-color: transparent;
+  height: 0%;
+  transition: height 600ms ease-in, visibility 600ms ease-out;
+}
+.accordion-container.item-checked .accordion-item-content {
+  height: 100%;
+  visibility: visible;
+}
+.accordion-container.item-checked .accordion-item-content * .content-main-text > * {
+  @apply text-primary-content
+}
+.accordion-container.item-checked .accordion-item-content * .content-secondary-text > * {
+  @apply text-secondary
+}
+.accordion-item-content > * * {
+  color: transparent;
+  transition: color 500ms cubic-bezier(0.1, 0.56, 0.79, 0.54);
+}
