@@ -1,7 +1,8 @@
 export const Footer = () => {
   return (
-    <footer id='footer' className='footer px-[7.5rem] pb-24 pt-16 gap-x-12'>
-      <div id="address" className='border-t border-[#3C3C3C] pt-12 w-[13rem]'>
+    <footer id='footer' className='footer px-[7.5rem] pb-24 pt-16'>
+      <div id="address" className=''>
+        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
           Office
         </div>
@@ -10,7 +11,8 @@ export const Footer = () => {
           <p className="hover:text-secondary-focus transition-colors">Volgogradskaya, 26A</p>
         </div>
       </div>
-      <div id="mail-us" className='border-t border-[#3C3C3C] pt-12 w-[13rem]'>
+      <div id="mail-us" className=''>
+        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         MAIL US
         </div>
@@ -18,7 +20,8 @@ export const Footer = () => {
           <p className="hover:text-secondary-focus transition-colors">info@faceit.com.ua</p>
         </div>
       </div>
-      <div id="follow-us" className='border-t border-[#3C3C3C] pt-12 w-[13rem]'>
+      <div id="follow-us" className=''>
+        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         FOLLOW US
         </div>
@@ -27,7 +30,8 @@ export const Footer = () => {
           <a className="hover:text-secondary-focus transition-colors" href="#social-media">Linked In</a>
         </div>
       </div>
-      <div id="legal" className='border-t border-[#3C3C3C] pt-12 w-[13rem]'>
+      <div id="legal" className=''>
+        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         lEGAL
         </div>
