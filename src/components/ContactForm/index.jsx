@@ -6,6 +6,8 @@ import { StyledInput } from "@/components/StyledInput"
 import { PrimaryButton } from "@/components/PrimaryButton"
 import { seekingOptions, budgetOptions } from "./options"
 import { emailRule, fullNameRule, messageRule } from "./rules"
+import { axios } from "@/utils/axiosInstance"
+import { useState } from "react"
 
 export const ContactForm = () => {
   const {
@@ -24,11 +26,33 @@ export const ContactForm = () => {
     },
     reValidateMode: 'onChange'
   })
+  const [response, setResponse] = useState({
+    text: '',
+    visible: false
+  })
 
-  const onSubmit = (data) => {
-    // ToDo: add request with collected data
-    console.log('data', data)
-  }
+  // const onSubmit = (data) => {
+  //   // ToDo: add request with collected data
+  //   console.log('data', data)
+  // }
+
+  const onSubmit = async (data) => {
+    try {
+      // ToDo: add next behavior
+      const response = await axios.post("/api", { data });
+      setResponse({
+        text: "We will contact you as soon as possible. Thank you for your interest.",
+        visible: true
+      })
+      console.log('response', response)
+    } catch (error) {
+      console.log('error', error)
+      setResponse({
+        text: "Our developer seems to be unable to write the request properly, so we did not receive your letter. Do you really want to contact us?",
+        visible: true
+      });
+    }
+  };
 
   return (
     <form
@@ -84,6 +108,11 @@ export const ContactForm = () => {
         error={errors?.message}
       />
       <PrimaryButton type='submit' className="px-0" title={'Submit'} />
+      {response.visible &&
+        <div className='px-4 text-secondary text-base text-center'>
+          {response.text}
+        </div>
+      }
     </form>
   )
 }
