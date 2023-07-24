@@ -6,7 +6,7 @@ import { ClientButton } from "./ClientButton"
 export const Testimonials = () => {
   return (
     <>
-      <div className='flex flex-col gap-y-8'>
+      <div className='flex flex-col gap-y-8 pt-32' id="testimonials">
         <HeaderText className='mb-9'>What our clients are saying</HeaderText>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-12'>
           {

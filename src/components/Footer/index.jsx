@@ -1,8 +1,9 @@
 export const Footer = () => {
   return (
-    <footer id='footer' className='footer sm:grid-cols-2 lg:grid-cols-4 px-[7.5rem] pb-24 pt-16'>
-      <div id="address" className=''>
-        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
+    <footer id='footer' className='px-8 md:px-[7.5rem] pb-24 pt-16 '>
+      <div className="container mx-auto flex flex-row gap-x-4 gap-y-12 justify-between flex-wrap">
+      <div id="address" className='flex flex-shrink-0 flex-col'>
+        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
           Office
         </div>
@@ -11,8 +12,8 @@ export const Footer = () => {
           <p className="hover:text-secondary-focus transition-colors">Volgogradskaya, 26A</p>
         </div>
       </div>
-      <div id="mail-us" className=''>
-        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
+      <div id="mail-us" className='flex flex-shrink-0 flex-col'>
+        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         MAIL US
         </div>
@@ -20,8 +21,9 @@ export const Footer = () => {
           <p className="hover:text-secondary-focus transition-colors">info@faceit.com.ua</p>
         </div>
       </div>
-      <div id="follow-us" className=''>
-        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
+      <div id="follow-us" className='flex flex-shrink-0 flex-col'>
+      <div className="ml-auto min-w-[13rem]">
+        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         FOLLOW US
         </div>
@@ -29,15 +31,19 @@ export const Footer = () => {
           <a className="hover:text-secondary-focus transition-colors" href="#social-media">Instagram</a>
           <a className="hover:text-secondary-focus transition-colors" href="#social-media">Linked In</a>
         </div>
+        </div>
       </div>
-      <div id="legal" className=''>
-        <div className='h-px w-[13rem] bg-[#3c3c3c] mb-8' />
+      <div id="legal" className='flex flex-shrink-0 flex-col'>
+        <div className="ml-auto min-w-[13rem]">
+        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         lEGAL
         </div>
         <div className='font-light flex flex-col gap-y-2.5'>
           <a className="hover:text-secondary-focus transition-colors" href="#legal">Privacy</a>
           <a className="hover:text-secondary-focus transition-colors" href="#legal">Terms</a>
+        </div>
+      </div>
         </div>
       </div>
     </footer>
