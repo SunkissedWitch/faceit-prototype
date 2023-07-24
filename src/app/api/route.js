@@ -45,7 +45,7 @@ export async function POST(request) {
         }
       });
     });
-    console.log('result', result)
+
     if (result?.response) {
       return NextResponse.json(
         {
