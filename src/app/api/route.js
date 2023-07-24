@@ -2,7 +2,10 @@ import { NextResponse } from "next/server";
 import { createTransport } from "nodemailer";
 import { formatEmailMessage } from "@/utils/formatMail";
 
-const { EMAIL_USER, EMAIL_PASS } = process.env;
+const { EMAIL_USER, EMAIL_PASS, } = process.env;
+const FACEIT_EMAIL = 'annagekata@protonmail.com';
+// ToDo: replace current FACEIT_EMAIL with the next row, when everything going to final deploy
+// const FACEIT_EMAIL = 'info@faceit.com.ua';
 
 export async function POST(request) {
   const res = await request.json();
@@ -19,7 +22,7 @@ export async function POST(request) {
     const mailMessage = formatEmailMessage(res.data);
 
     // EMAIL_PASS must be your app password from https://myaccount.google.com/apppasswords
-    const transporter = await createTransport({
+    const transporter = createTransport({
       service: "gmail",
       auth: {
         user: EMAIL_USER,
@@ -29,7 +32,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: EMAIL_USER,
-      to: email,
+      to: FACEIT_EMAIL,
       subject: "New message from FaceIT portal!",
       html: mailMessage,
     };
@@ -49,7 +52,7 @@ export async function POST(request) {
     if (result?.response) {
       return NextResponse.json(
         {
-          response: `Success. Email sent: ${result?.response}`,
+          response: `Success. Email sent: ${result.response}`,
         },
         { status: 200, statusText: "Email sent successfully" }
       );
