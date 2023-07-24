@@ -19,7 +19,7 @@ export async function POST(request) {
     const mailMessage = formatEmailMessage(res.data);
 
     // EMAIL_PASS must be your app password from https://myaccount.google.com/apppasswords
-    const transporter = createTransport({
+    const transporter = await createTransport({
       service: "gmail",
       auth: {
         user: EMAIL_USER,
@@ -45,6 +45,7 @@ export async function POST(request) {
         }
       });
     });
+    console.log('result', result)
     if (result?.response) {
       return NextResponse.json(
         {
