@@ -1,52 +1,61 @@
 import { NextResponse } from "next/server";
-// import { createTransport } from 'nodemailer';
+import { createTransport } from "nodemailer";
+import { formatEmailMessage } from "@/utils/formatMail";
 
-// const { EMAIL_USER, EMAIL_PASS } = process.env
+const { EMAIL_USER, EMAIL_PASS } = process.env;
 
 export async function POST(request) {
   const res = await request.json();
   try {
-    console.log('res', res)
-    const { email, full_name, message } = res?.data
+    const { email, full_name, message } = res?.data;
+  
     if (!email || !full_name || !message) {
       return NextResponse.json(
-        { error: 'The following fields are required: email, full_name, message' },
+        { error: "The following fields are required: email, full_name, message" },
         { status: 404, statusText: "Email error" }
       );
     }
-    // ToDo: add sending an email
 
-    // const transporter = createTransport({
-    //   service: 'gmail',
-    //   auth: {
-    //     user: EMAIL_USER,
-    //     pass: EMAIL_PASS
-    //   }
-    // });
+    const mailMessage = formatEmailMessage(res.data);
 
-    // const mailOptions = {
-    //   from: EMAIL_USER,
-    //   to: email,
-    //   subject: 'Sending Email using Node.js',
-    //   html: '<h1>Welcome</h1><p>That was easy!</p>'
-    // };
+    // EMAIL_PASS must be your app password from https://myaccount.google.com/apppasswords
+    const transporter = createTransport({
+      service: "gmail",
+      auth: {
+        user: EMAIL_USER,
+        pass: EMAIL_PASS,
+      },
+    });
 
-    // transporter.sendMail(mailOptions, function(error, info){
-    //   if (error) {
-    //     console.log(error);
-    //   } else {
-    //     console.log('Email sent: ' + info.response);
-    //   }
-    // });
-
-    return NextResponse.json({
-      response: 'Success'
-    },
-      { status: 200, statusText: "Success" }
-    );
+    const mailOptions = {
+      from: EMAIL_USER,
+      to: email,
+      subject: "New message from FaceIT portal!",
+      html: mailMessage,
+    };
+    const result = await new Promise((resolve, reject) => {
+      // send mail
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.error(err);
+          reject(err);
+        } else {
+          console.log(info);
+          resolve(info);
+        }
+      });
+    });
+    if (result?.response) {
+      return NextResponse.json(
+        {
+          response: `Success. Email sent: ${result?.response}`,
+        },
+        { status: 200, statusText: "Email sent successfully" }
+      );
+    }
 
   } catch (error) {
-    console.log('error', error)
+    console.log("error", error);
     return NextResponse.json(
       { error: error.message },
       { status: 500, statusText: "Sending email error" }
