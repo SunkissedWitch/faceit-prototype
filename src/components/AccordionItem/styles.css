@@ -1,5 +1,5 @@
 .accordion-container {
-  max-height: 7rem;
+  /* max-height: 7rem; */
   overflow: hidden;
   transition: max-height 600ms ease-in;
 }

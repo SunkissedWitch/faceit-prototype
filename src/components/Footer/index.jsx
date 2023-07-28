@@ -1,9 +1,9 @@
 export const Footer = () => {
   return (
-    <footer id='footer' className='px-8 md:px-[7.5rem] pb-24 pt-16 '>
-      <div className="container mx-auto flex flex-row gap-x-4 gap-y-12 justify-between flex-wrap">
+    <footer id='footer' className='px-5 md:px-[7.5rem] pb-24 pt-16 '>
+      <div className="container mx-auto flex flex-col sm:flex-row gap-x-4 gap-y-12 justify-between flex-wrap">
       <div id="address" className='flex flex-shrink-0 flex-col'>
-        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
+        <div className='h-px flex flex-initial w-full sm:w-[13rem] bg-[#3c3c3c] mb-[1.87rem] sm:mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
           Office
         </div>
@@ -13,7 +13,7 @@ export const Footer = () => {
         </div>
       </div>
       <div id="mail-us" className='flex flex-shrink-0 flex-col'>
-        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
+        <div className='h-px flex flex-initial w-full sm:w-[13rem] bg-[#3c3c3c] mb-[1.87rem] sm:mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         MAIL US
         </div>
@@ -22,8 +22,8 @@ export const Footer = () => {
         </div>
       </div>
       <div id="follow-us" className='flex flex-shrink-0 flex-col'>
-      <div className="ml-auto min-w-[13rem]">
-        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
+      <div className="sm:ml-auto min-w-[13rem]">
+        <div className='h-px flex flex-initial w-full sm:w-[13rem] bg-[#3c3c3c] mb-[1.87rem] sm:mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         FOLLOW US
         </div>
@@ -34,8 +34,8 @@ export const Footer = () => {
         </div>
       </div>
       <div id="legal" className='flex flex-shrink-0 flex-col'>
-        <div className="ml-auto min-w-[13rem]">
-        <div className='h-px flex flex-initial w-[13rem] bg-[#3c3c3c] mb-8' />
+        <div className="sm:ml-auto min-w-[13rem]">
+        <div className='h-px flex flex-initial w-full sm:w-[13rem] bg-[#3c3c3c] mb-[1.87rem] sm:mb-8' />
         <div className='footer-title text-primary-content opacity-100 mb-6'>
         lEGAL
         </div>
