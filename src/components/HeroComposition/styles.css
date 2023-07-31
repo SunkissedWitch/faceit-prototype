@@ -151,3 +151,21 @@
   text-transform: capitalize;
   animation: third_heading_white_text 8s infinite;
 }
+
+/* import bg from 'public/Hero_Bg.svg'
+import bg_mobile from 'public/Hero_Bg_mobile.svg' */
+
+.hero__bg {
+  background-image: url('/Hero_Bg_mobile.svg');
+  background-position-y: top;
+}
+@media (min-width: 768px) {
+  .hero__bg {
+    background-image: url('/Hero_Bg.svg');
+  }
+}
+/* @media (min-width: 1280px) {
+  .hero__bg {
+    min-height: 32rem;
+  }
+} */
