@@ -164,8 +164,3 @@ import bg_mobile from 'public/Hero_Bg_mobile.svg' */
     background-image: url('/Hero_Bg.svg');
   }
 }
-/* @media (min-width: 1280px) {
-  .hero__bg {
-    min-height: 32rem;
-  }
-} */

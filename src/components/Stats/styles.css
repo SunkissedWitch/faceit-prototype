@@ -1,0 +1,30 @@
+.custom-medium-stats {
+  position: relative
+}
+.custom-medium-stats::before {
+  position: absolute;
+  top: 0;
+  width: 94px;
+  height: 1px;
+  justify-self: center;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+}
+.custom-medium-stats::after {
+  position: absolute;
+  height: 80%;
+  width: 1px;
+  align-self: center;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+}
+@media (prefers-color-scheme: dark) {
+  .custom-medium-stats::after {
+    --tw-bg-opacity: 1;
+    background-color: hsl(0 0% 15% / var(--tw-bg-opacity));
+  }
+  .custom-medium-stats::before {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b3) / var(--tw-bg-opacity));
+  }
+}
