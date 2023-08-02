@@ -1,6 +1,9 @@
+// "use client"
+
 import { Logo } from '@/components/Logo'
 import { MAIN_LINKS } from './content'
 import { MobileMenu } from '@/components/MobileMenu'
+import ScrollLink from '@/components/ScrollLink'
 
 export const Navbar = () => {
   return (
@@ -17,7 +20,7 @@ export const Navbar = () => {
             MAIN_LINKS.map((link, index) => {
               const { title, href } = link
               return (
-                <li key={`mobile-links-${href}-${index}`}><a href={href}>{title}</a></li>
+                <li key={`mobile-links-${href}-${index}`}><ScrollLink href={href}>{title}</ScrollLink></li>
               )
             })
           }
@@ -27,7 +30,7 @@ export const Navbar = () => {
             MAIN_LINKS.map((link, index) => {
               const { title, href } = link
               return (
-                <li key={`desktop-links-${href}-${index}`} ><a href={href}>{title}</a></li>
+                <li key={`desktop-links-${href}-${index}`} ><ScrollLink href={href}>{title}</ScrollLink></li>
               )
             })
           }
