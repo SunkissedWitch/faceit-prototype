@@ -23,3 +23,13 @@
     background-color: hsl(var(--pc) / var(--tw-bg-opacity));
   }
 }
+@media (max-width: 768px) {
+  .btn:is(input[type="radio"]):hover {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--pc) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--pc) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: hsl(var(--b1) / var(--tw-text-opacity));
+  }
+}
