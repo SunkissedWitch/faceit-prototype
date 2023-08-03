@@ -6,8 +6,8 @@ import { ClientButton } from "./ClientButton"
 export const Testimonials = () => {
   return (
     <>
-      <div className='flex flex-col gap-y-8 pt-32' id="testimonials">
-        <HeaderText className='mb-9'>What our clients are saying</HeaderText>
+      <div className='flex flex-col gap-y-8 pt-20 mt-4 sm:mt-0 sm:pt-32' id="testimonials">
+        <HeaderText className='mb-5 sm:mb-9'>What our clients are saying</HeaderText>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-12'>
           {
             REVIEWS.map((review) => (

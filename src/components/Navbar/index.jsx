@@ -15,16 +15,7 @@ export const Navbar = () => {
         </button>
       </div>
       <div className="navbar-end flex-grow">
-        <MobileMenu>
-          {
-            MAIN_LINKS.map((link, index) => {
-              const { title, href } = link
-              return (
-                <li key={`mobile-links-${href}-${index}`}><ScrollLink href={href}>{title}</ScrollLink></li>
-              )
-            })
-          }
-        </MobileMenu>
+        <MobileMenu />
         <ul className='hidden md:flex menu menu-horizontal px-2 md:px-6 text-secondary'>
           {
             MAIN_LINKS.map((link, index) => {

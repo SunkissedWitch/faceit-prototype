@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer id='footer' className='px-5 sm:px-10 md:px-14 lg:px-[7.5rem] pb-24 pt-16'>
+    <footer id='footer' className='px-5 sm:px-10 md:px-14 lg:px-[7.5rem] pb-11 sm:pb-24 pt-16'>
       <div className="container mx-auto flex flex-col sm:flex-row gap-x-4 gap-y-12 justify-between flex-wrap">
       <div id="address" className='flex flex-shrink-0 flex-col'>
         <div className='h-px flex flex-initial w-full sm:w-[13rem] bg-[#3c3c3c] mb-[1.87rem] sm:mb-8' />

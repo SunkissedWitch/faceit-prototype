@@ -36,7 +36,7 @@ export const CardAvatar = ({ avatar, firstName }) => {
 
 export const CardText = ({ children, name }) => {
   return (
-    <div className='text-primary-content text-lg leading-snug font-normal pb-6'>
+    <div className='text-primary-content text-lg leading-snug font-normal sm:pb-6'>
       <span className='text-primary uppercase font-medium mr-1 text-base'>{name} said </span>
       {children}
     </div>

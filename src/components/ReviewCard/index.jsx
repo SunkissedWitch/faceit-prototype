@@ -10,7 +10,7 @@ export const ReviewCard = ({ review, ...props }) => {
   }
   return (
     <>
-      <div {...props} className='w-full flex flex-col min-h-16 py-2 px-0 gap-y-7 sm:gap-y-8'>
+      <div {...props} className='w-full flex flex-col min-h-16 py-2 px-0 gap-y-6 sm:gap-y-8'>
         <div className='flex flex-row w-5/6 gap-x-4'>
           <CardAvatar avatar={avatar} firstName={firstName} />
           <CardHeaderText

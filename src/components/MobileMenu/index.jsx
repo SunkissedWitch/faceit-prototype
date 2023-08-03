@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import { Hamburger, Close } from '@/components/HamburgerIcons'
+import { MAIN_LINKS } from '@/components/Navbar/content'
+import ScrollLink from '@/components/ScrollLink'
 
-export const MobileMenu = ({ children }) => {
+export const MobileMenu = () => {
   const [open, setOpen] = useState(false)
   const toggleOpen = () => setOpen(prevState => !prevState)
 
@@ -22,7 +24,14 @@ export const MobileMenu = ({ children }) => {
           <div className='px-4 mt-20 shadow-lg w-screen sm:max-w-xs h-[calc(100%-5rem)] bg-base-100 text-base-content [&_ul>*]:rounded-none flex flex-col justify-between'>
             <ul className="menu join join-vertical px-0 [&_li>*]:rounded-none [&_li>*]:join-item [&_li>*]:border-collapse [&_li>*]:border-b [&_li>*]:border-base-300 [&_li>*]:last:border-b-0 [&_li>a]:py-[1.56rem]">
               {/* Sidebar content here */}
-              {children}
+              {
+                MAIN_LINKS.map((link, index) => {
+                  const { title, href } = link
+                  return (
+                    <li key={`mobile-links-${href}-${index}`}><ScrollLink href={href} closeMenu={toggleOpen}>{title}</ScrollLink></li>
+                  )
+                })
+              }
             </ul>
             <ul className='menu join join-vertical rounded-none [&_li>*]:rounded-none border-t pt-7 border-base-300 font-light'>
               <li><a className='py-2.5 px-0' href="mailto:info@faceit.com.ua" target='_blank'>info@faceit.com.ua</a></li>
