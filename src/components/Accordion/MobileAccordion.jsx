@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { steps } from "@/components/Accordion/content"
 import { AccordionItem } from "@/components/AccordionItem"
+import { steps } from './content'
 
 export const MobileAccordion = () => {
   const [checked, setCheked] = useState('1')
