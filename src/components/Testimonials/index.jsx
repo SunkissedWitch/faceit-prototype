@@ -46,7 +46,7 @@ export const Testimonials = () => {
             ))
           }
         </div>
-        <PrimaryButton title={'Learn more Testimonials'} onClick={showMoreReviews} className={'px-0'} />
+        <PrimaryButton title={'Learn more Testimonials'} onClick={showMoreReviews} className={'px-0 mx-auto sm:mx-0'} />
       </div>
     </>
   )

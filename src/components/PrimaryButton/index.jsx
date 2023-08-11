@@ -1,14 +1,12 @@
-import arrow from 'public/Arrow.svg'
-import Image from 'next/image'
+import './styles.css'
 
 export const PrimaryButton = ({ title, className, ...props }) => {
   return (
     <button
       {...props}
-      className={`btn btn-ghost text-base text-primary font-normal leading-5 gap-x-2 max-w-max ${className || ''}`}
+      className={`btn btn-gradient text-base font-medium leading-5 max-w-max px-[1.38rem] py-[0.68rem] ${className || ''}`}
     >
       {title}
-      <Image src={arrow} alt='' width={28} height={28} placeholder='empty' />
     </button>
   )
 }

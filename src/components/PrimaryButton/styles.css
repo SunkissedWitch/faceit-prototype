@@ -1,0 +1,57 @@
+@property --colorStart {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #04A474;
+}
+
+@property --colorEnd {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #039001;
+}
+@property --rotateGradient {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 90deg;
+}
+
+.btn-gradient {
+  border-color: transparent;
+  border: 1px solid transparent;
+  --tw-bg-opacity: 1;
+  --colorStart: hsl(var(--b1) / var(--tw-bg-opacity));
+  --colorEnd: hsl(var(--b1) / var(--tw-bg-opacity));
+  background:
+  linear-gradient(90deg, var(--colorStart), var(--colorEnd)) padding-box,
+  linear-gradient(var(--rotateGradient), hsl(var(--p) / var(--tw-bg-opacity)), hsl(var(--a) / var(--tw-bg-opacity))) border-box;
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition: --colorStart 150ms, --colorEnd 200ms, --rotateGradient 600ms;
+}
+
+@media (hover: hover) {
+  .btn-gradient:hover {
+    --tw-border-opacity: 0;
+    border-color: hsl(var(--p) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    --colorStart: hsl(var(--p) / 1);
+    --colorEnd: hsl(var(--a) / 1);
+    --rotateGradient: 180deg;
+    --tw-text-opacity: 1;
+    color: hsl(var(--pc) / var(--tw-text-opacity));
+  }
+}
+
+.btn-gradient.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  --colorStart: hsl(var(--p) / 1);
+  --colorEnd: hsl(var(--a) / 1);
+  --rotateGradient: 180deg;
+  --tw-text-opacity: 1;
+  color: hsl(var(--b1) / var(--tw-text-opacity));
+}

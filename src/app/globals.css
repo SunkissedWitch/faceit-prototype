@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+.btn-primary.btn-outline {
+  @apply hover:bg-gradient-to-r from-primary to-accent hover:text-white active:bg-gradient-to-r
+} */
