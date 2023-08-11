@@ -41,7 +41,7 @@
     --colorEnd: hsl(var(--a) / 1);
     --rotateGradient: 180deg;
     --tw-text-opacity: 1;
-    color: hsl(var(--pc) / var(--tw-text-opacity));
+    color: #fff;
   }
 }
 
@@ -53,5 +53,5 @@
   --colorEnd: hsl(var(--a) / 1);
   --rotateGradient: 180deg;
   --tw-text-opacity: 1;
-  color: hsl(var(--b1) / var(--tw-text-opacity));
+  color: #fff;
 }
