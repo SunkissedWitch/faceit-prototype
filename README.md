@@ -22,14 +22,14 @@ npm run dev
 
 ## Techologies and links
 - [Next.js Documentation](https://nextjs.org/docs) - Next.js features and API.
-- [Nodemailer example](https://www.nodemailer.com/#example) - A simple Nodemailer example.
+- [Nodemailer example](https://www.nodemailer.com/#example) - A simple Nodemailer example. Used to handle email notifications.
 - [Tailwindcss: Next.js Guide](https://tailwindcss.com/docs/guides/nextjs) - How to add Tailwind to Next.js project.
 - [DaisyUI](https://daisyui.com/docs/use/) - The usage of DaisyUI plugin.
-- [React FAST Marquee](https://github.com/justin-chu/react-fast-marquee) - Github docs about how to install and use React FAST Marquee.
-- [React Hook Form](https://react-hook-form.com/docs/useform) - Performant, flexible and extensible forms with easy-to-use validation.
-- React In Viewport
-- react-responsive
-- axios
+- [React FAST Marquee](https://github.com/justin-chu/react-fast-marquee) - Github docs about how to install and use React FAST Marquee. Used for the logos slide row.
+- [React Hook Form](https://react-hook-form.com/docs/useform) - Performant, flexible and extensible forms with easy-to-use validation. Used for the contact form.
+- [React In Viewport](https://github.com/roderickhsiao/react-in-viewport#readme) - Library to detect whether or not a component is in the viewport. Used to handle the accordion desktop animation.
+- [react-responsive](https://www.npmjs.com/package/react-responsive) - Media queries in react for responsive design.
+- [axios](https://axios-http.com/docs/api_intro) - Promise based HTTP client for the browser and node.js. Used for API requests.
 
 ## Deploy on Vercel (docs)
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details about how to deploy Next.js projects with Vercel.
